@@ -13,5 +13,6 @@ namespace SIBKM_API.Controllers
     public class EmployeeController : GeneralController<IEmployeeRepository, Employee, string>
     {
         public EmployeeController(IEmployeeRepository repository) : base(repository) { }
+
     }
 }
