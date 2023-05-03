@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SIBKM_API.props" />
+</Project>
