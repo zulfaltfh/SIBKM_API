@@ -18,6 +18,9 @@ namespace SIBKM_API.Repository.Data
             {
                 Name = registerVM.UniversityName
             };
+
+            //sebelum insert, cek apakah university sudah ada atau belum
+
             _context.Set<Universities>().Add(university);
             result = _context.SaveChanges();
 
@@ -76,5 +79,11 @@ namespace SIBKM_API.Repository.Data
 
             return result;
         }
-    }
+
+        /*public bool Login(LoginVM loginVM)
+        {
+
+        }*/
+
+        }
 }
