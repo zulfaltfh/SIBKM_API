@@ -6,6 +6,6 @@ namespace SIBKM_API.Repository.Interface
     public interface IAccountsRepository : IGeneralRepository<Accounts, string>
     {
         int Register (RegisterVM registerVM);
-        //bool Login(LoginVM loginVM);
+        bool Login(LoginVM loginVM);
     }
 }

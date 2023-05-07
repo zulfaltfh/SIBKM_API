@@ -1,10 +1,10 @@
-﻿using SIBKM_API.Controllers.BaseController;
-using SIBKM_API.Models;
+﻿using SIBKM_API.Models;
 using SIBKM_API.Repository.Interface;
 using SIBKM_API.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using SIBKM_API.BaseController;
 
 namespace SIBKM_API.Controllers
 {

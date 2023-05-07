@@ -1,4 +1,5 @@
 ﻿using SIBKM_API.Context;
+using SIBKM_API.Handlers;
 using SIBKM_API.Models;
 using SIBKM_API.Repository.Interface;
 using SIBKM_API.ViewModels;
@@ -20,9 +21,15 @@ namespace SIBKM_API.Repository.Data
             };
 
             //sebelum insert, cek apakah university sudah ada atau belum
-
-            _context.Set<Universities>().Add(university);
-            result = _context.SaveChanges();
+            if (_context.Universities.Any(u => u.Name.Contains(registerVM.UniversityName)))
+            {
+                university.Id = _context.Universities.FirstOrDefault(u => u.Name.Contains(registerVM.UniversityName))!.Id;
+            }
+            else
+            {
+                _context.Set<Universities>().Add(university);
+                result = _context.SaveChanges();
+            }
 
             //insert to Education table
             var education = new Educations
@@ -54,7 +61,7 @@ namespace SIBKM_API.Repository.Data
             var account = new Accounts
             {
                 EmployeeNIK = registerVM.NIK,
-                Password = registerVM.Password,
+                Password = Hashing.HashPassword(registerVM.Password),
             };
             _context.Set<Accounts>().Add(account);
             result = _context.SaveChanges();
@@ -80,10 +87,22 @@ namespace SIBKM_API.Repository.Data
             return result;
         }
 
-        /*public bool Login(LoginVM loginVM)
+        public bool Login(LoginVM loginVM)
         {
+            var getEmployeeAccount = _context.Employees.Join
+                                    (_context.Accounts, e => e.NIK, a => a.EmployeeNIK,
+                                        (e, a) => new {
+                                            Email = e.Email,
+                                            Password = a.Password,
+                                        }).FirstOrDefault(e => e.Email == loginVM.Email);
 
-        }*/
+            if (getEmployeeAccount == null)
+            {
+                return false;
+            }
 
+            return Hashing.ValidatePassword(loginVM.Password, getEmployeeAccount.Password);
         }
+
+    }
 }

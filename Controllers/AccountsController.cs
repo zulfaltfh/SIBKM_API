@@ -1,10 +1,10 @@
-﻿using SIBKM_API.Controllers.BaseController;
-using SIBKM_API.Models;
+﻿using SIBKM_API.Models;
 using SIBKM_API.Repository.Interface;
 using SIBKM_API.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using SIBKM_API.BaseController;
 
 namespace SIBKM_API.Controllers
 {
@@ -13,6 +13,27 @@ namespace SIBKM_API.Controllers
     public class AccountsController : GeneralController<IAccountsRepository, Accounts, string>
     {
         public AccountsController(IAccountsRepository accountsRepository) : base(accountsRepository) { }
+
+        [HttpPost("Login")]
+        public ActionResult Login(LoginVM loginVM)
+        {
+            var login = _repository.Login(loginVM);
+            if (login)
+            {
+                return Ok(new ResponseDataVM<string>
+                {
+                    Code = StatusCodes.Status200OK,
+                    Status = HttpStatusCode.OK.ToString(),
+                    Message = "Login Success"
+                });
+            }
+            return NotFound(new ResponseErrorsVM<string>
+            {
+                Code = StatusCodes.Status500InternalServerError,
+                Status = HttpStatusCode.InternalServerError.ToString(),
+                Errors = "Login Failed, Account or Password Not Found!"
+            });
+        }
 
         [HttpPost("Register")]
         public ActionResult Register(RegisterVM registerVM)
@@ -24,7 +45,7 @@ namespace SIBKM_API.Controllers
                 {
                     Code = StatusCodes.Status200OK,
                     Status = HttpStatusCode.OK.ToString(),
-                    Message = "Register Success"
+                    Message = "Insert Success"
                 });
             }
 
@@ -32,7 +53,7 @@ namespace SIBKM_API.Controllers
             {
                 Code = StatusCodes.Status500InternalServerError,
                 Status = HttpStatusCode.InternalServerError.ToString(),
-                Errors = "Register Failed"
+                Errors = "Insert Failed / Lost Connection"
             });
         }
     }

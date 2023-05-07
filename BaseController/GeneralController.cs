@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace SIBKM_API.Controllers.BaseController
+namespace SIBKM_API.BaseController
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SIBKM_API.Controllers.BaseController;
+using SIBKM_API.BaseController;
 using SIBKM_API.Models;
 using SIBKM_API.Repository.Interface;
 
