@@ -4,6 +4,6 @@ namespace SIBKM_API.Repository.Interface
 {
     public interface IAccountRolesRepository : IGeneralRepository<AccountRoles, int>
     {
-
+        IEnumerable<string> GetRolesByEmail(string email);
     }
 }

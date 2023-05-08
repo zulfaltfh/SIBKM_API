@@ -86,3 +86,4 @@ C:\Users\Zulfa\Documents\File Kuliah\MSIB\MSIB Metrodata\Projects\SIBKM_API\obj\
 C:\Users\Zulfa\Documents\File Kuliah\MSIB\MSIB Metrodata\Projects\SIBKM_API\obj\Debug\net6.0\SIBKM_API.genruntimeconfig.cache
 C:\Users\Zulfa\Documents\File Kuliah\MSIB\MSIB Metrodata\Projects\SIBKM_API\obj\Debug\net6.0\ref\SIBKM_API.dll
 C:\Users\Zulfa\Documents\File Kuliah\MSIB\MSIB Metrodata\Projects\SIBKM_API\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\Zulfa\Documents\File Kuliah\MSIB\MSIB Metrodata\Projects\SIBKM_API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

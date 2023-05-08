@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ETSgXGyRJIuMPoHY0UCo0ZYnGq2/yxWpt97Vlu8sI2rNPleF4xtoQTC4bh+17pWYS5N5mdddWlS1mM1ymzSpMg==",
+  "dgSpecHash": "+avGQSikzQqq0q2THJY9gtcDv5ld/aPKxw46ygy1x616FrkpeyFPfY1g49Bja/P/B2gXJGH3SENR5O1E0+OxmQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Zulfa\\Documents\\File Kuliah\\MSIB\\MSIB Metrodata\\Projects\\SIBKM_API\\SIBKM_API.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Zulfa\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Zulfa\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Zulfa\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Zulfa\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.16\\microsoft.aspnetcore.authentication.jwtbearer.6.0.16.nupkg.sha512",
     "C:\\Users\\Zulfa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Zulfa\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Zulfa\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
